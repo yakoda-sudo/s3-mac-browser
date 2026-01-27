@@ -62,20 +62,3 @@ S3MacBrowserDemo/
 
 Copyright © 2026. All rights reserved.
 
-## Releases
-
-When the GitHub repo is ready, add releases here:
-
-1. Go to **Releases** → **Draft a new release**.
-2. Tag version (e.g. `v0.2`) and title (e.g. `s3-mac-browser 0.2`).
-3. Upload the `.app` bundle or zipped release artifacts.
-4. Add release notes (features, fixes, known issues).
-
-## Screenshots
-
-Add screenshots here after upload. Example markdown:
-
-```
-![Main View](docs/screenshots/main.png)
-![Object Details](docs/screenshots/details.png)
-```
