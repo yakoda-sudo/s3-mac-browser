@@ -1,5 +1,7 @@
 # s3-mac-browser
 
+<img width="256" height="256" alt="icon_256x256" src="https://github.com/user-attachments/assets/f605833f-b46d-4024-a7bb-53b8c1fdb239" />
+
 <!-- Badges: replace links once GitHub repo is created -->
 [![macOS](https://img.shields.io/badge/macOS-13%2B-000000?logo=apple&logoColor=white)](#requirements)
 [![Swift](https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white)](#requirements)
