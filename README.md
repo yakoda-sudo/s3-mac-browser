@@ -7,7 +7,7 @@
 [![Swift](https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white)](#requirements)
 
 A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoints (MinIO/LocalStack), AWS-compatible services, and basic object management.
-<img width="1492" height="993" alt="image" src="https://github.com/user-attachments/assets/186d9b33-fee6-43e2-8a28-56c54b3017c3" />
+<img width="1172" height="1242" alt="image" src="https://github.com/user-attachments/assets/5da8f0cb-f207-4097-8e2e-a7ce1a9624ed" />
 
 ## Features
 
