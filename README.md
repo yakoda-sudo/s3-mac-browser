@@ -36,6 +36,8 @@ A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoint
 6. Right‑click an object to get a presigned URL or delete. (presigned URL timeout is configuratble in Edit menu)
 7. Drag & drop files into the bottom area to upload to the current prefix.
 
+Please note , this app is not signed, you need to allow it from macos ,running: xattr -dr com.apple.quarantine "/path/to/s3-mac-browser.app"
+
 ## Multi‑selection
 
 - **Command‑click** (or **Control‑click**) to toggle selection of multiple objects.
