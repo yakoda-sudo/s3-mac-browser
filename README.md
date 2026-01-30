@@ -8,16 +8,20 @@
 
 A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoints (MinIO/LocalStack), AWS-compatible services, and basic object management.
 <img width="1172" height="1242" alt="image" src="https://github.com/user-attachments/assets/5da8f0cb-f207-4097-8e2e-a7ce1a9624ed" />
+<img width="1391" height="27" alt="image" src="https://github.com/user-attachments/assets/fe1b29ab-b1de-4421-8b46-61a80b199155" />
 
 ## Features
 
 - Connect to S3-compatible endpoints (AWS/MinIO/Wasabi/PureStorage(local)/DELLEMC)
 - List buckets and browse prefixes
 - Object metadata (HEAD) in a properties panel
+- Adding client side request metrics display (72hrs) for the s3 account . Classify by request type .  You can copy the metrics for calculating billing purpose :-)
 - Presigned URL generation 
 - Upload via drag & drop
 - Delete single or multiple objects/folders (press shift for multi-selection)
 - Search/filter in current view
+ 
+
 
 ## Requirements
 
