@@ -8,7 +8,8 @@
 
 A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoints (MinIO/LocalStack), AWS-compatible services, and basic object management.
 <img width="1172" height="1242" alt="image" src="https://github.com/user-attachments/assets/5da8f0cb-f207-4097-8e2e-a7ce1a9624ed" />
-<img width="1391" height="27" alt="image" src="https://github.com/user-attachments/assets/fe1b29ab-b1de-4421-8b46-61a80b199155" />
+<img width="518" height="360" alt="image" src="https://github.com/user-attachments/assets/7f63a5fc-09ee-4079-964c-aa8a47a0df54" />
+
 
 ## Features
 
