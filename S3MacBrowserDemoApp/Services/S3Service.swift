@@ -12,20 +12,32 @@ struct ConnectionResult {
     let objectInfo: S3Object?
 }
 
+struct ObjectDataResult {
+    let data: Data
+    let response: ConnectionResult
+}
+
 protocol S3ServiceProtocol: Sendable {
-    func listBuckets(endpoint: URL, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult
-    func listObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult
-    func headObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult
-    func putObject(endpoint: URL, bucket: String, key: String, data: Data, contentType: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult
+    func listBuckets(endpoint: URL, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func listObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func listObjectVersions(endpoint: URL, bucket: String, prefix: String, keyMarker: String?, versionIdMarker: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func headObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func putObject(endpoint: URL, bucket: String, key: String, data: Data, contentType: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func putObjectWithProgress(endpoint: URL, bucket: String, key: String, data: Data, contentType: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String, progress: @escaping @Sendable (Int64, Int64) -> Void) async throws -> ConnectionResult
     func presignGetURL(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, expiresSeconds: Int) -> String
-    func deleteObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult
-    func listAllObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> [S3Object]
+    func deleteObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func deleteObjectVersion(endpoint: URL, bucket: String, key: String, versionId: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult
+    func listAllObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> [S3Object]
+    func getObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ObjectDataResult
+    func getObjectWithProgress(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String, progress: @escaping @Sendable (Int64, Int64) -> Void) async throws -> ObjectDataResult
+    func getObjectVersionWithProgress(endpoint: URL, bucket: String, key: String, versionId: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String, progress: @escaping @Sendable (Int64, Int64) -> Void) async throws -> ObjectDataResult
 }
 
 final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
     private let timeout: TimeInterval = 10
+    private let metricsRecorder = MetricsRecorder.shared
 
-    func listBuckets(endpoint: URL, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult {
+    func listBuckets(endpoint: URL, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
         let start = Date()
         let requestURL = ensureRootPath(endpoint)
         var request = URLRequest(url: requestURL)
@@ -46,6 +58,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
             partial[key] = value
         }
         let requestSummary = makeRequestSummary(request: request)
+        Task { await metricsRecorder.record(category: .list, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
 
         return ConnectionResult(
             statusCode: http?.statusCode,
@@ -59,7 +72,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         )
     }
 
-    func listObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult {
+    func listObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
         let start = Date()
         let requestURL = makeListObjectsURL(endpoint: endpoint, bucket: bucket, prefix: prefix, delimiter: "/")
         var request = URLRequest(url: requestURL)
@@ -80,6 +93,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
             partial[key] = value
         }
         let requestSummary = makeRequestSummary(request: request)
+        Task { await metricsRecorder.record(category: .list, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
 
         return ConnectionResult(
             statusCode: http?.statusCode,
@@ -93,7 +107,66 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         )
     }
 
-    private func listObjectsPage(endpoint: URL, bucket: String, prefix: String, continuationToken: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> (entries: [S3Object], nextContinuationToken: String?) {
+    func listObjectVersions(endpoint: URL, bucket: String, prefix: String, keyMarker: String?, versionIdMarker: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
+        var nextKeyMarker = keyMarker
+        var nextVersionMarker = versionIdMarker
+        var allEntries: [S3Object] = []
+        var lastStatusCode: Int?
+        var lastResponseText: String?
+        var lastHeaders: [String: String] = [:]
+        var lastRequestSummary: String = ""
+        var totalElapsed = 0
+
+        repeat {
+            let start = Date()
+            let requestURL = makeListObjectVersionsURL(endpoint: endpoint, bucket: bucket, prefix: prefix, delimiter: "/", keyMarker: nextKeyMarker, versionIdMarker: nextVersionMarker)
+            var request = URLRequest(url: requestURL)
+            request.httpMethod = "GET"
+            request.timeoutInterval = timeout
+            signRequest(&request, region: region, accessKey: accessKey, secretKey: secretKey, payloadHash: sha256Hex(""))
+
+            let session = makeSession(allowInsecure: allowInsecure)
+            let (data, response) = try await session.data(for: request)
+
+            let elapsed = Int(Date().timeIntervalSince(start) * 1000)
+            totalElapsed += elapsed
+            let http = response as? HTTPURLResponse
+            let text = String(data: data, encoding: .utf8)
+            let parsed = parseObjectVersions(from: data)
+            let headerMap = (http?.allHeaderFields ?? [:]).reduce(into: [String: String]()) { partial, entry in
+                let key = String(describing: entry.key)
+                let value = String(describing: entry.value)
+                partial[key] = value
+            }
+            let requestSummary = makeRequestSummary(request: request)
+            Task { await metricsRecorder.record(category: .list, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
+
+            allEntries.append(contentsOf: parsed.entries)
+            nextKeyMarker = parsed.nextKeyMarker
+            nextVersionMarker = parsed.nextVersionIdMarker
+            lastStatusCode = http?.statusCode
+            lastResponseText = text
+            lastHeaders = headerMap
+            lastRequestSummary = requestSummary
+
+            if let status = http?.statusCode, status >= 400 {
+                break
+            }
+        } while (nextKeyMarker?.isEmpty == false) || (nextVersionMarker?.isEmpty == false)
+
+        return ConnectionResult(
+            statusCode: lastStatusCode,
+            responseText: lastResponseText,
+            elapsedMs: totalElapsed,
+            bucketNames: [],
+            responseHeaders: lastHeaders,
+            requestSummary: lastRequestSummary,
+            objectEntries: allEntries,
+            objectInfo: nil
+        )
+    }
+
+    private func listObjectsPage(endpoint: URL, bucket: String, prefix: String, continuationToken: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> (entries: [S3Object], nextContinuationToken: String?) {
         let requestURL = makeListObjectsURL(endpoint: endpoint, bucket: bucket, prefix: prefix, delimiter: nil, continuationToken: continuationToken)
         var request = URLRequest(url: requestURL)
         request.httpMethod = "GET"
@@ -102,11 +175,12 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
 
         let session = makeSession(allowInsecure: allowInsecure)
         let (data, _) = try await session.data(for: request)
+        Task { await metricsRecorder.record(category: .list, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
         let parsed = parseObjectEntriesWithToken(from: data)
         return (parsed.entries, parsed.nextContinuationToken)
     }
 
-    func headObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult {
+    func headObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
         let start = Date()
         let requestURL = makeObjectURL(endpoint: endpoint, bucket: bucket, key: key)
         var request = URLRequest(url: requestURL)
@@ -127,6 +201,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         }
         let requestSummary = makeRequestSummary(request: request)
         let objectInfo = parseHeadObject(key: key, headers: headerMap)
+        Task { await metricsRecorder.record(category: .head, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
 
         return ConnectionResult(
             statusCode: http?.statusCode,
@@ -140,7 +215,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         )
     }
 
-    func putObject(endpoint: URL, bucket: String, key: String, data: Data, contentType: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult {
+    func putObject(endpoint: URL, bucket: String, key: String, data: Data, contentType: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
         let start = Date()
         let requestURL = makeObjectURL(endpoint: endpoint, bucket: bucket, key: key)
         var request = URLRequest(url: requestURL)
@@ -164,6 +239,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
             partial[key] = value
         }
         let requestSummary = makeRequestSummary(request: request)
+        Task { await metricsRecorder.record(category: .put, uploaded: Int64(data.count), downloaded: Int64(responseData.count), profileName: profileName) }
 
         return ConnectionResult(
             statusCode: http?.statusCode,
@@ -175,6 +251,86 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
             objectEntries: [],
             objectInfo: nil
         )
+    }
+
+    func putObjectWithProgress(endpoint: URL, bucket: String, key: String, data: Data, contentType: String?, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String, progress: @escaping @Sendable (Int64, Int64) -> Void) async throws -> ConnectionResult {
+        let requestURL = makeObjectURL(endpoint: endpoint, bucket: bucket, key: key)
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "PUT"
+        request.timeoutInterval = timeout
+        if let contentType {
+            request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        }
+        let payloadHash = sha256Hex(data)
+        signRequest(&request, region: region, accessKey: accessKey, secretKey: secretKey, payloadHash: payloadHash)
+
+        let delegate = ProgressSessionDelegate(allowInsecure: allowInsecure, progress: progress)
+        let session = URLSession(configuration: .ephemeral, delegate: delegate, delegateQueue: nil)
+        let result = try await delegate.performUpload(session: session, request: request, data: data)
+        Task { await metricsRecorder.record(category: .put, uploaded: Int64(data.count), downloaded: 0, profileName: profileName) }
+        return result
+    }
+
+    func getObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ObjectDataResult {
+        let start = Date()
+        let requestURL = makeObjectURL(endpoint: endpoint, bucket: bucket, key: key)
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "GET"
+        request.timeoutInterval = timeout
+        signRequest(&request, region: region, accessKey: accessKey, secretKey: secretKey, payloadHash: sha256Hex(""))
+
+        let session = makeSession(allowInsecure: allowInsecure)
+        let (data, response) = try await session.data(for: request)
+
+        let elapsed = Int(Date().timeIntervalSince(start) * 1000)
+        let http = response as? HTTPURLResponse
+        let text = String(data: data, encoding: .utf8)
+        let headerMap = (http?.allHeaderFields ?? [:]).reduce(into: [String: String]()) { partial, entry in
+            let key = String(describing: entry.key)
+            let value = String(describing: entry.value)
+            partial[key] = value
+        }
+        let requestSummary = makeRequestSummary(request: request)
+        let result = ConnectionResult(
+            statusCode: http?.statusCode,
+            responseText: text,
+            elapsedMs: elapsed,
+            bucketNames: [],
+            responseHeaders: headerMap,
+            requestSummary: requestSummary,
+            objectEntries: [],
+            objectInfo: nil
+        )
+        Task { await metricsRecorder.record(category: .get, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
+        return ObjectDataResult(data: data, response: result)
+    }
+
+    func getObjectWithProgress(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String, progress: @escaping @Sendable (Int64, Int64) -> Void) async throws -> ObjectDataResult {
+        let requestURL = makeObjectURL(endpoint: endpoint, bucket: bucket, key: key)
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "GET"
+        request.timeoutInterval = timeout
+        signRequest(&request, region: region, accessKey: accessKey, secretKey: secretKey, payloadHash: sha256Hex(""))
+
+        let delegate = ProgressSessionDelegate(allowInsecure: allowInsecure, progress: progress)
+        let session = URLSession(configuration: .ephemeral, delegate: delegate, delegateQueue: nil)
+        let result = try await delegate.performDownload(session: session, request: request)
+        Task { await metricsRecorder.record(category: .get, uploaded: 0, downloaded: Int64(result.data.count), profileName: profileName) }
+        return result
+    }
+
+    func getObjectVersionWithProgress(endpoint: URL, bucket: String, key: String, versionId: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String, progress: @escaping @Sendable (Int64, Int64) -> Void) async throws -> ObjectDataResult {
+        let requestURL = makeObjectVersionURL(endpoint: endpoint, bucket: bucket, key: key, versionId: versionId)
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "GET"
+        request.timeoutInterval = timeout
+        signRequest(&request, region: region, accessKey: accessKey, secretKey: secretKey, payloadHash: sha256Hex(""))
+
+        let delegate = ProgressSessionDelegate(allowInsecure: allowInsecure, progress: progress)
+        let session = URLSession(configuration: .ephemeral, delegate: delegate, delegateQueue: nil)
+        let result = try await delegate.performDownload(session: session, request: request)
+        Task { await metricsRecorder.record(category: .get, uploaded: 0, downloaded: Int64(result.data.count), profileName: profileName) }
+        return result
     }
 
     func presignGetURL(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, expiresSeconds: Int) -> String {
@@ -229,7 +385,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         return components?.url?.absoluteString ?? url.absoluteString
     }
 
-    func deleteObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> ConnectionResult {
+    func deleteObject(endpoint: URL, bucket: String, key: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
         let start = Date()
         let requestURL = makeObjectURL(endpoint: endpoint, bucket: bucket, key: key)
         var request = URLRequest(url: requestURL)
@@ -249,6 +405,7 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
             partial[key] = value
         }
         let requestSummary = makeRequestSummary(request: request)
+        Task { await metricsRecorder.record(category: .delete, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
 
         return ConnectionResult(
             statusCode: http?.statusCode,
@@ -262,7 +419,41 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         )
     }
 
-    func listAllObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool) async throws -> [S3Object] {
+    func deleteObjectVersion(endpoint: URL, bucket: String, key: String, versionId: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> ConnectionResult {
+        let start = Date()
+        let requestURL = makeObjectVersionURL(endpoint: endpoint, bucket: bucket, key: key, versionId: versionId)
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "DELETE"
+        request.timeoutInterval = timeout
+        signRequest(&request, region: region, accessKey: accessKey, secretKey: secretKey, payloadHash: sha256Hex(""))
+
+        let session = makeSession(allowInsecure: allowInsecure)
+        let (data, response) = try await session.data(for: request)
+
+        let elapsed = Int(Date().timeIntervalSince(start) * 1000)
+        let http = response as? HTTPURLResponse
+        let text = String(data: data, encoding: .utf8)
+        let headerMap = (http?.allHeaderFields ?? [:]).reduce(into: [String: String]()) { partial, entry in
+            let key = String(describing: entry.key)
+            let value = String(describing: entry.value)
+            partial[key] = value
+        }
+        let requestSummary = makeRequestSummary(request: request)
+        Task { await metricsRecorder.record(category: .delete, uploaded: 0, downloaded: Int64(data.count), profileName: profileName) }
+
+        return ConnectionResult(
+            statusCode: http?.statusCode,
+            responseText: text,
+            elapsedMs: elapsed,
+            bucketNames: [],
+            responseHeaders: headerMap,
+            requestSummary: requestSummary,
+            objectEntries: [],
+            objectInfo: nil
+        )
+    }
+
+    func listAllObjects(endpoint: URL, bucket: String, prefix: String, region: String, accessKey: String, secretKey: String, allowInsecure: Bool, profileName: String) async throws -> [S3Object] {
         var all: [S3Object] = []
         var token: String?
 
@@ -275,7 +466,8 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
                 region: region,
                 accessKey: accessKey,
                 secretKey: secretKey,
-                allowInsecure: allowInsecure
+                allowInsecure: allowInsecure,
+                profileName: profileName
             )
             all.append(contentsOf: result.entries)
             token = result.nextContinuationToken
@@ -382,6 +574,14 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         return (parser.entries, parser.nextContinuationToken)
     }
 
+    private func parseObjectVersions(from data: Data) -> (entries: [S3Object], nextKeyMarker: String?, nextVersionIdMarker: String?) {
+        let parser = ObjectVersionListParser()
+        let xml = XMLParser(data: data)
+        xml.delegate = parser
+        xml.parse()
+        return (parser.entries, parser.nextKeyMarker, parser.nextVersionIdMarker)
+    }
+
     private func iso8601Date() -> String {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -478,12 +678,44 @@ final class S3Service: NSObject, S3ServiceProtocol, @unchecked Sendable {
         return components?.url ?? endpoint
     }
 
+    private func makeListObjectVersionsURL(endpoint: URL, bucket: String, prefix: String, delimiter: String?, keyMarker: String?, versionIdMarker: String?) -> URL {
+        var components = URLComponents(url: endpoint, resolvingAgainstBaseURL: false)
+        let safeBucket = bucket.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? bucket
+        components?.path = "/" + safeBucket
+        var items: [URLQueryItem] = [
+            URLQueryItem(name: "versions", value: nil)
+        ]
+        if let delimiter {
+            items.append(URLQueryItem(name: "delimiter", value: delimiter))
+        }
+        if !prefix.isEmpty {
+            items.append(URLQueryItem(name: "prefix", value: prefix))
+        }
+        if let keyMarker, !keyMarker.isEmpty {
+            items.append(URLQueryItem(name: "key-marker", value: keyMarker))
+        }
+        if let versionIdMarker, !versionIdMarker.isEmpty {
+            items.append(URLQueryItem(name: "version-id-marker", value: versionIdMarker))
+        }
+        components?.queryItems = items
+        return components?.url ?? endpoint
+    }
+
     private func makeObjectURL(endpoint: URL, bucket: String, key: String) -> URL {
         var components = URLComponents(url: endpoint, resolvingAgainstBaseURL: false)
         let safeBucket = bucket.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? bucket
         let safeKey = key.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? key
         components?.path = "/" + safeBucket + "/" + safeKey
         components?.queryItems = nil
+        return components?.url ?? endpoint
+    }
+
+    private func makeObjectVersionURL(endpoint: URL, bucket: String, key: String, versionId: String) -> URL {
+        var components = URLComponents(url: endpoint, resolvingAgainstBaseURL: false)
+        let safeBucket = bucket.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? bucket
+        let safeKey = key.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? key
+        components?.path = "/" + safeBucket + "/" + safeKey
+        components?.queryItems = [URLQueryItem(name: "versionId", value: versionId)]
         return components?.url ?? endpoint
     }
 
@@ -511,6 +743,116 @@ final class InsecureSessionDelegate: NSObject, URLSessionDelegate {
         } else {
             completionHandler(.performDefaultHandling, nil)
         }
+    }
+}
+
+private final class ProgressSessionDelegate: NSObject, URLSessionDataDelegate, URLSessionTaskDelegate, @unchecked Sendable {
+    private let allowInsecure: Bool
+    private let progress: @Sendable (Int64, Int64) -> Void
+    private var expectedBytes: Int64 = 0
+    private var receivedBytes: Int64 = 0
+    private var response: URLResponse?
+    private var dataBuffer = Data()
+    private var continuation: CheckedContinuation<ObjectDataResult, Error>?
+    private var uploadContinuation: CheckedContinuation<ConnectionResult, Error>?
+
+    init(allowInsecure: Bool, progress: @escaping @Sendable (Int64, Int64) -> Void) {
+        self.allowInsecure = allowInsecure
+        self.progress = progress
+    }
+
+    func performDownload(session: URLSession, request: URLRequest) async throws -> ObjectDataResult {
+        try await withCheckedThrowingContinuation { continuation in
+            self.continuation = continuation
+            let task = session.dataTask(with: request)
+            task.resume()
+        }
+    }
+
+    func performUpload(session: URLSession, request: URLRequest, data: Data) async throws -> ConnectionResult {
+        try await withCheckedThrowingContinuation { continuation in
+            self.uploadContinuation = continuation
+            expectedBytes = Int64(data.count)
+            progress(0, expectedBytes)
+            let task = session.uploadTask(with: request, from: data)
+            task.resume()
+        }
+    }
+
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        if allowInsecure, let trust = challenge.protectionSpace.serverTrust {
+            completionHandler(.useCredential, URLCredential(trust: trust))
+        } else {
+            completionHandler(.performDefaultHandling, nil)
+        }
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
+        self.response = response
+        expectedBytes = response.expectedContentLength > 0 ? response.expectedContentLength : expectedBytes
+        progress(receivedBytes, expectedBytes)
+        completionHandler(.allow)
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        dataBuffer.append(data)
+        receivedBytes += Int64(data.count)
+        progress(receivedBytes, expectedBytes)
+    }
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
+        expectedBytes = totalBytesExpectedToSend
+        progress(totalBytesSent, totalBytesExpectedToSend)
+    }
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let error {
+            continuation?.resume(throwing: error)
+            uploadContinuation?.resume(throwing: error)
+            return
+        }
+
+        let http = task.response as? HTTPURLResponse
+        let headerMap = (http?.allHeaderFields ?? [:]).reduce(into: [String: String]()) { partial, entry in
+            let key = String(describing: entry.key)
+            let value = String(describing: entry.value)
+            partial[key] = value
+        }
+        let requestSummary = (task.originalRequest).map { requestSummaryText($0) } ?? ""
+        let text = String(data: dataBuffer, encoding: .utf8)
+        let result = ConnectionResult(
+            statusCode: http?.statusCode,
+            responseText: text,
+            elapsedMs: 0,
+            bucketNames: [],
+            responseHeaders: headerMap,
+            requestSummary: requestSummary,
+            objectEntries: [],
+            objectInfo: nil
+        )
+
+        if let continuation {
+            continuation.resume(returning: ObjectDataResult(data: dataBuffer, response: result))
+        }
+        if let uploadContinuation {
+            uploadContinuation.resume(returning: result)
+        }
+    }
+
+    private func requestSummaryText(_ request: URLRequest) -> String {
+        let method = request.httpMethod ?? "GET"
+        let urlString = request.url?.absoluteString ?? "(no url)"
+        var lines: [String] = ["\(method) \(urlString)"]
+        if let headers = request.allHTTPHeaderFields {
+            for (key, value) in headers.sorted(by: { $0.key.lowercased() < $1.key.lowercased() }) {
+                if key.lowercased() == "authorization" {
+                    lines.append("\(key): (redacted)")
+                } else {
+                    lines.append("\(key): \(value)")
+                }
+            }
+        }
+        return lines.joined(separator: "\n")
     }
 }
 
@@ -553,6 +895,11 @@ private final class ObjectListParser: NSObject, XMLParserDelegate {
     private var collectingPrefix = false
     private var prefixValue: String = ""
     private let dateFormatter = ISO8601DateFormatter()
+    private let dateFormatterFractional: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
 
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String]) {
         currentElement = elementName
@@ -585,7 +932,7 @@ private final class ObjectListParser: NSObject, XMLParserDelegate {
             case "ETag":
                 currentETag = trimmed.replacingOccurrences(of: "\"", with: "")
             case "LastModified":
-                if let date = dateFormatter.date(from: trimmed) {
+                if let date = dateFormatterFractional.date(from: trimmed) ?? dateFormatter.date(from: trimmed) {
                     currentLastModified = date
                 }
             case "Contents":
@@ -622,5 +969,135 @@ private final class ObjectListParser: NSObject, XMLParserDelegate {
         }
         currentElement = ""
         currentText = ""
+    }
+}
+
+private final class ObjectVersionListParser: NSObject, XMLParserDelegate {
+    private(set) var entries: [S3Object] = []
+    private(set) var nextKeyMarker: String?
+    private(set) var nextVersionIdMarker: String?
+    private var currentElement: String = ""
+    private var currentText: String = ""
+    private var inVersion = false
+    private var inDeleteMarker = false
+    private var inCommonPrefix = false
+    private var currentKey: String = ""
+    private var currentVersionId: String = ""
+    private var currentSize: Int = 0
+    private var currentETag: String = ""
+    private var currentLastModified: Date = Date()
+    private var currentIsLatest: Bool = false
+    private var prefixValue: String = ""
+    private let dateFormatter = ISO8601DateFormatter()
+    private let dateFormatterFractional: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String]) {
+        currentElement = elementName
+        currentText = ""
+        if elementName == "Version" {
+            inVersion = true
+            resetEntry()
+        } else if elementName == "DeleteMarker" {
+            inDeleteMarker = true
+            resetEntry()
+        } else if elementName == "CommonPrefixes" {
+            inCommonPrefix = true
+            prefixValue = ""
+        }
+    }
+
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        currentText += string
+    }
+
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        let trimmed = currentText.trimmingCharacters(in: .whitespacesAndNewlines)
+        if inVersion || inDeleteMarker {
+            switch elementName {
+            case "Key":
+                currentKey = trimmed
+            case "VersionId":
+                currentVersionId = trimmed
+            case "IsLatest":
+                currentIsLatest = (trimmed.lowercased() == "true")
+            case "Size":
+                currentSize = Int(trimmed) ?? 0
+            case "ETag":
+                currentETag = trimmed.replacingOccurrences(of: "\"", with: "")
+            case "LastModified":
+                if let date = dateFormatterFractional.date(from: trimmed) ?? dateFormatter.date(from: trimmed) {
+                    currentLastModified = date
+                }
+            case "Version":
+                let entry = S3Object(
+                    key: currentKey,
+                    sizeBytes: currentSize,
+                    lastModified: currentLastModified,
+                    contentType: "object",
+                    eTag: currentETag,
+                    versionId: currentVersionId,
+                    isDeleteMarker: false,
+                    isDeleted: false,
+                    isVersioned: true,
+                    isLatest: currentIsLatest
+                )
+                entries.append(entry)
+                inVersion = false
+            case "DeleteMarker":
+                let entry = S3Object(
+                    key: currentKey,
+                    sizeBytes: 0,
+                    lastModified: currentLastModified,
+                    contentType: "delete-marker",
+                    eTag: currentETag,
+                    versionId: currentVersionId,
+                    isDeleteMarker: true,
+                    isDeleted: true,
+                    isVersioned: true,
+                    isLatest: currentIsLatest
+                )
+                entries.append(entry)
+                inDeleteMarker = false
+            default:
+                break
+            }
+        } else if inCommonPrefix {
+            if elementName == "Prefix" {
+                prefixValue = trimmed
+            } else if elementName == "CommonPrefixes" {
+                let entry = S3Object(
+                    key: prefixValue,
+                    sizeBytes: 0,
+                    lastModified: Date(),
+                    contentType: "folder",
+                    eTag: ""
+                )
+                entries.append(entry)
+                inCommonPrefix = false
+            }
+        } else if elementName == "NextKeyMarker" {
+            if !trimmed.isEmpty {
+                nextKeyMarker = trimmed
+            }
+        } else if elementName == "NextVersionIdMarker" {
+            if !trimmed.isEmpty {
+                nextVersionIdMarker = trimmed
+            }
+        }
+        currentElement = ""
+        currentText = ""
+    }
+
+    private func resetEntry() {
+        currentKey = ""
+        currentVersionId = ""
+        currentSize = 0
+        currentETag = ""
+        currentLastModified = Date()
+        currentIsLatest = false
     }
 }
