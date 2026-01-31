@@ -1,25 +1,30 @@
 # s3-mac-browser
+<img width="256" height="256" alt="image" src="https://github.com/user-attachments/assets/767cc93e-c83c-49cb-8660-dc4557f2fc2b" />
 
-<img width="256" height="256" alt="icon_256x256" src="https://github.com/user-attachments/assets/f605833f-b46d-4024-a7bb-53b8c1fdb239" />
+
 
 <!-- Badges: replace links once GitHub repo is created -->
 [![macOS](https://img.shields.io/badge/macOS-13%2B-000000?logo=apple&logoColor=white)](#requirements)
 [![Swift](https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white)](#requirements)
 
-A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoints (MinIO/LocalStack), AWS-compatible services, and basic object management.
-<img width="1172" height="1242" alt="image" src="https://github.com/user-attachments/assets/5da8f0cb-f207-4097-8e2e-a7ce1a9624ed" />
-<img width="518" height="360" alt="image" src="https://github.com/user-attachments/assets/7f63a5fc-09ee-4079-964c-aa8a47a0df54" />
+A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoints (MinIO/LocalStack/Flashblade object /DellEMC object ...), AWS-compatible services (e.g. wasabi/GCP object store), and basic object management. Also support Microsoft Storage Account container blob store
+<img width="1594" height="1088" alt="image" src="https://github.com/user-attachments/assets/9a75be34-da06-4d67-a5d5-5d3b6cb21846" />
+API call metrics/Debug options
+
+<img width="520" height="368" alt="image" src="https://github.com/user-attachments/assets/95336b05-13fd-496c-9e4f-8b7640dd32c0" />
+
 
 
 ## Features
 
 - Connect to S3-compatible endpoints (AWS/MinIO/Wasabi/PureStorage(local)/DELLEMC)
-- List buckets and browse prefixes
-- Object metadata (HEAD) in a properties panel
+- Azure Blob Storage via SAS URL (account or container SAS)
+- List buckets and browse prefixes ,toggle display versions/delete markers/ soft deletes
+- Object metadata (HEAD) in a properties panel.
 - Adding client side request metrics display (72hrs) for the s3 account . Classify by request type .  You can copy the metrics for calculating billing purpose :-)
-- Presigned URL generation 
-- Upload via drag & drop
-- Delete single or multiple objects/folders (press shift for multi-selection)
+- Presigned URL generation, storage account blob sharing
+- Upload via drag & drop ,right click objects to download
+- Delete single or multiple objects/folders (press shift for multi-selection) ,can also restore object remove delete markers
 - Search/filter in current view
  
 
@@ -28,20 +33,20 @@ A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoint
 
 - macOS 13+ (Ventura)
 - Swift 6 toolchain
-- Network access to your endpoint
+- Network access to your endpoint / or azure storage account SAS
 
 
 ## Usage
 
-1. Enter endpoint URL (e.g. `http://localhost:9000` for MinIO 'http://IP_address'for your Local S3-compatible storage e.g. Pure Flashblade or `https://s3.us-east-1.wasabisys.com` for Wasabi).
-2. Set region and access/secret keys.
+1. Enter endpoint URL (e.g. `http://localhost:9000` for MinIO 'http://IP_address'for your Local S3-compatible storage e.g. Pure Flashblade or `https://s3.us-east-1.wasabisys.com` for Wasabi) and SAS URL for azure storage account.
+2. Set region and access/secret keys. (no need for azure SAS URL which contains token )
 3. Click **Connect** to list buckets.
 4. Double‑click a bucket or folder to navigate.
 5. Click an object to view metadata in the **Object Properties** panel.
-6. Right‑click an object to get a presigned URL or delete. (presigned URL timeout is configuratble in Edit menu)
+6. Right‑click an object to get a presigned URL or delete / download. (presigned URL timeout is configuratble in Edit menu)
 7. Drag & drop files into the bottom area to upload to the current prefix.
 
-Please note , this app is not signed, you need to allow it from macos ,running: xattr -dr com.apple.quarantine "/path/to/s3-mac-browser.app"
+Please note , this app is not signed, you need to allow it from macos ,running: xattr -dr com.apple.quarantine "/Applications/s3-mac-browser.app" 
 
 ## Multi‑selection
 
