@@ -46,7 +46,8 @@ API call metrics/Debug options
 6. Right‑click an object to get a presigned URL or delete / download. (presigned URL timeout is configuratble in Edit menu)
 7. Drag & drop files into the bottom area to upload to the current prefix.
 
-Please note , this app is not signed, you need to allow it from macos ,running: xattr -dr com.apple.quarantine "/Applications/s3-mac-browser.app" 
+Please note , this app is not signed, you need to allow it from macos ,running command to trust:
+xattr -dr com.apple.quarantine "/Applications/s3-mac-browser.app" 
 
 ## Multi‑selection
 
