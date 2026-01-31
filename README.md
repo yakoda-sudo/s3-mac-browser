@@ -26,6 +26,7 @@ API call metrics/Debug options
 - Upload via drag & drop ,right click objects to download
 - Delete single or multiple objects/folders (press shift for multi-selection) ,can also restore object remove delete markers
 - Search/filter in current view
+- Free Cross-Vendors/Protocol Replication Job between AWS S3/ S3-compatible object / Azure Storage Account
  
 
 
@@ -45,6 +46,7 @@ API call metrics/Debug options
 5. Click an object to view metadata in the **Object Properties** panel.
 6. Right‑click an object to get a presigned URL or delete / download. (presigned URL timeout is configuratble in Edit menu)
 7. Drag & drop files into the bottom area to upload to the current prefix.
+8. Data Migration menu and wizard creating data migration job on any local object store / aws s3/ s3 compatible /Microsoft azure storage account 
 
 Please note , this app is not signed, you need to allow it from macos ,running command to trust:
 xattr -dr com.apple.quarantine "/Applications/s3-mac-browser.app" 
