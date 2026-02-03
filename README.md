@@ -25,7 +25,7 @@ API call metrics/Debug options
 - Presigned URL generation, storage account blob sharing
 - Upload via drag & drop ,right click objects to download
 - Delete single or multiple objects/folders (press shift for multi-selection) ,can also restore object remove delete markers
-- Search/filter in current view
+- Easy and strate-forward UI to configure any object storage types. display history of full debugging API calls
 - Free Cross-Vendors/Protocol Replication Job between AWS S3/ S3-compatible object / Azure Storage Account
  
 
