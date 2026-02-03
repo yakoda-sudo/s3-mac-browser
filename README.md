@@ -57,10 +57,19 @@ xattr -dr com.apple.quarantine "/Applications/s3-mac-browser.app"
 - **Shift‑click** to select a range between the last selected item and the clicked item.
 - Right‑click any selected item and choose **Delete** to delete all selected items.
 
+## Data-Migration
+- Support Migration for all types of profiels (AWS S3/ S3 compatible object/ Local object store/ Azure Storage account )
+- Easy strate-forward wizard will help to configure the source and distinations for migrate job
+- All metrics during migration will also be saved in metrics
+<img width="700" height="1534" alt="data_migration" src="https://github.com/user-attachments/assets/6c141d5c-50b5-42c2-a8ad-dd4fed1c8ba6" />
+
+
+
 ## Notes
 
 - Presigned URL expiry is configurable via **Edit → Presigned URL Expiry**.
 - For HTTPS endpoints, keep **Ignore SSL Verification** OFF unless you are testing a local endpoint with self‑signed certs.
+- For DataMigration, the parameters can be configured in the Migration settings menu, need to configured according to the local memory/internet bandwidth etc
 
 ## Project Structure
 
