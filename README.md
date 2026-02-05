@@ -8,7 +8,8 @@
 [![Swift](https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white)](#requirements)
 
 A lightweight  macOS SwiftUI professinal S3 browser that supports local endpoints (MinIO/LocalStack/Flashblade object /DellEMC object ...), AWS-compatible services (e.g. wasabi/GCP object store), Azure Storage Account and free all-platform Data migration. Also support Microsoft Storage Account container blob store
-<img width="1454" height="879" alt="image" src="https://github.com/user-attachments/assets/18ef6dc1-64e6-4448-af2a-914a8d2977fd" />
+<img width="1597" height="980" alt="image" src="https://github.com/user-attachments/assets/a5d0e1d8-877d-4849-a2f1-0271967eef58" />
+
 
 API call metrics/Debug options
 
