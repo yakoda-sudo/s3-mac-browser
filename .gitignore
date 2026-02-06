@@ -1,3 +1,12 @@
 README.md
 S3MacBrowserDemo/README.md
 README.md
+.DS_Store
+.build/
+.dmg-staging/
+dist/
+*.dSYM/
+*.app/
+*.zip
+AppIcon.iconset/
+newicon/
