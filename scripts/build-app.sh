@@ -7,6 +7,7 @@ ICON_SRC="$ROOT_DIR/newicon/icon2-1024x1024.png"
 ICONSET_DIR="$ROOT_DIR/AppIcon.iconset"
 ICNS_OUT="$ROOT_DIR/${APP_NAME}.icns"
 APP_DIR="$ROOT_DIR/${APP_NAME}.app"
+RESOURCE_BUNDLE="$ROOT_DIR/.build/release/${APP_NAME}_S3MacBrowserDemoApp.bundle"
 
 if [[ ! -f "$ICON_SRC" ]]; then
   echo "Missing icon: $ICON_SRC" >&2
@@ -33,6 +34,12 @@ rm -rf "$APP_DIR"
 mkdir -p "$APP_DIR/Contents/MacOS" "$APP_DIR/Contents/Resources"
 cp "$ROOT_DIR/.build/release/${APP_NAME}" "$APP_DIR/Contents/MacOS/"
 cp "$ICNS_OUT" "$APP_DIR/Contents/Resources/"
+if [[ -d "$RESOURCE_BUNDLE" ]]; then
+  cp -R "$RESOURCE_BUNDLE" "$APP_DIR/Contents/Resources/"
+fi
+if compgen -G "$ROOT_DIR/Sources/S3MacBrowserDemoApp/Resources/*.lproj" > /dev/null; then
+  cp -R "$ROOT_DIR/Sources/S3MacBrowserDemoApp/Resources/"*.lproj "$APP_DIR/Contents/Resources/"
+fi
 
 cat > "$APP_DIR/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>
@@ -43,8 +50,8 @@ cat > "$APP_DIR/Contents/Info.plist" <<'PLIST'
   <key>CFBundleExecutable</key><string>s3-mac-browser</string>
   <key>CFBundleIdentifier</key><string>com.yangkikou.s3macbrowser</string>
   <key>CFBundlePackageType</key><string>APPL</string>
-  <key>CFBundleShortVersionString</key><string>0.7.0</string>
-  <key>CFBundleVersion</key><string>7</string>
+  <key>CFBundleShortVersionString</key><string>0.9.2</string>
+  <key>CFBundleVersion</key><string>9</string>
   <key>LSMinimumSystemVersion</key><string>13.0</string>
   <key>CFBundleIconFile</key><string>s3-mac-browser.icns</string>
 </dict>
