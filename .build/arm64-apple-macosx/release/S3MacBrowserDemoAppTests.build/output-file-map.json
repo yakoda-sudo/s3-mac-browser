@@ -1,0 +1,19 @@
+{
+  "": {
+    "dependencies": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/S3MacBrowserDemoAppTests.d",
+    "object": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/S3MacBrowserDemoAppTests.o",
+    "swift-dependencies": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/master.swiftdeps"
+  },
+  "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/MetricsTests.swift": {
+    "object": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests.swift.o",
+    "swiftmodule": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests.swiftdeps",
+    "diagnostics": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests.dia"
+  },
+  "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/DerivedSources/resource_bundle_accessor.swift": {
+    "object": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor.dia"
+  }
+}

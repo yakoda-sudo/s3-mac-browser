@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:S3MacBrowserDemo}",
+            "name": "Debug s3-mac-browser",
+            "target": "s3-mac-browser",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug s3-mac-browser"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:S3MacBrowserDemo}",
+            "name": "Release s3-mac-browser",
+            "target": "s3-mac-browser",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release s3-mac-browser"
+        }
+    ]
+}

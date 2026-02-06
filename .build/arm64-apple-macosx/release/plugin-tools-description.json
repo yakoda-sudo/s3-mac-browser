@@ -1,0 +1,1686 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.xctest/Contents/MacOS/s3-mac-browserPackageTests",
+      "packagePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo",
+      "productName" : "s3-mac-browserPackageTests"
+    }
+  ],
+  "copyCommands" : {
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/Info.plist" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/Info.plist"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/Info.plist"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ar.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ar.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ar.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/da.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/da.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/da.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/de.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/de.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/de.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/el.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/el.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/el.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/en.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/en.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/en.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/es.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/es.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/es.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/fi.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/fi.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/fi.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/fr.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/fr.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/fr.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/he.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/he.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/he.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/it.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/it.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/it.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ja.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ja.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ja.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ko.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ko.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ko.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/nl.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/nl.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/nl.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/pl.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/pl.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/pl.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ru.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ru.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/ru.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/th.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/th.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/th.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/zh-hans.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/zh-Hans.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/zh-hans.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/zh-hant.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/zh-Hant.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoApp.bundle/zh-hant.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/Info.plist" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/Info.plist"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/Info.plist"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ar.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ar.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ar.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/da.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/da.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/da.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/de.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/de.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/de.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/el.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/el.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/el.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/en.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/en.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/en.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/es.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/es.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/es.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/fi.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/fi.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/fi.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/fr.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/fr.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/fr.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/he.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/he.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/he.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/it.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/it.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/it.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ja.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ja.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ja.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ko.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ko.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ko.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/nl.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/nl.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/nl.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/pl.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/pl.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/pl.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ru.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/ru.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/ru.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/th.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/th.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/th.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/zh-hans.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/zh-Hans.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/zh-hans.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/zh-hant.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Resources/zh-Hant.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser_S3MacBrowserDemoAppTests.bundle/zh-hant.lproj/Localizable.strings"
+        }
+      ]
+    }
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.S3MacBrowserDemoApp-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/sources",
+      "importPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/LanguageManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/Localization.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/ConnectionProfile.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationJob.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationSettings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/S3Object.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/UploadParameters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/S3MacBrowserDemoApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/AzureBlobBackend.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MetricsRecorder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationCheckpointStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationRunner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationStreamer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Backend.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Service.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Signer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/StorageBackend.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/ConnectionViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/MigrationWizardViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/ConnectionView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationSettingsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationWizardView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UploadParametersView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UsageStatsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<S3MacBrowserDemoApp-arm64-apple-macosx26.0-release.module-resources>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "S3MacBrowserDemoApp",
+      "moduleOutputPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/S3MacBrowserDemoApp.swiftmodule",
+      "objects" : [
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/LanguageManager.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/Localization.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionProfile.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationJob.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettings.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Object.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParameters.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3MacBrowserDemoApp.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/AzureBlobBackend.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MetricsRecorder.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationCheckpointStore.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationRunner.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationStreamer.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Backend.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Service.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Signer.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/StorageBackend.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionViewModel.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardViewModel.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionView.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettingsView.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardView.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParametersView.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UsageStatsView.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "11",
+        "-serialize-diagnostics",
+        "-O",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+        "-module-cache-path",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "S3MacBrowserDemoApp_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "s3macbrowserdemo"
+      ],
+      "outputFileMapPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/LanguageManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/Localization.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionProfile.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationJob.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Object.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParameters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3MacBrowserDemoApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/AzureBlobBackend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MetricsRecorder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationCheckpointStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationRunner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationStreamer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Backend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Service.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Signer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/StorageBackend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParametersView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UsageStatsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/S3MacBrowserDemoApp.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/LanguageManager.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/Localization.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/ConnectionProfile.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationJob.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationSettings.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/S3Object.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/UploadParameters.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/S3MacBrowserDemoApp.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/AzureBlobBackend.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MetricsRecorder.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationCheckpointStore.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationRunner.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationStreamer.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Backend.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Service.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Signer.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/StorageBackend.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/ConnectionViewModel.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/MigrationWizardViewModel.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/ConnectionView.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationSettingsView.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationWizardView.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UploadParametersView.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UsageStatsView.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.S3MacBrowserDemoAppTests-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/sources",
+      "importPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/MetricsTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<S3MacBrowserDemoAppTests-arm64-apple-macosx26.0-release.module-resources>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "S3MacBrowserDemoAppTests",
+      "moduleOutputPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/S3MacBrowserDemoAppTests.swiftmodule",
+      "objects" : [
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests.swift.o",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "11",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/index/store",
+        "-O",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+        "-module-cache-path",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "s3macbrowserdemo"
+      ],
+      "outputFileMapPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/S3MacBrowserDemoAppTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/MetricsTests.swift",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.s3-mac-browserPackageTests-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/sources",
+      "importPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/S3MacBrowserDemoAppTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "s3_mac_browserPackageTests",
+      "moduleOutputPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/s3_mac_browserPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "11",
+        "-serialize-diagnostics",
+        "-O",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/include/s3-mac-browserPackageTests-Swift.h",
+        "-color-diagnostics",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "s3macbrowserdemo"
+      ],
+      "outputFileMapPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules/s3_mac_browserPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "S3MacBrowserDemoApp" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "S3MacBrowserDemoApp",
+      "-package-name",
+      "s3macbrowserdemo",
+      "-c",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/LanguageManager.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/Localization.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/ConnectionProfile.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationJob.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationSettings.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/S3Object.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/UploadParameters.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/S3MacBrowserDemoApp.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/AzureBlobBackend.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MetricsRecorder.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationCheckpointStore.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationRunner.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationStreamer.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Backend.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Service.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Signer.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/StorageBackend.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/ConnectionViewModel.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/MigrationWizardViewModel.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/ConnectionView.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationSettingsView.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationWizardView.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UploadParametersView.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UsageStatsView.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/DerivedSources/resource_bundle_accessor.swift",
+      "-I",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "11",
+      "-serialize-diagnostics",
+      "-O",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+      "-module-cache-path",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "S3MacBrowserDemoApp_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "s3macbrowserdemo",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "S3MacBrowserDemoAppTests" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "S3MacBrowserDemoAppTests",
+      "-package-name",
+      "s3macbrowserdemo",
+      "-c",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/MetricsTests.swift",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/DerivedSources/resource_bundle_accessor.swift",
+      "-I",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "11",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/index/store",
+      "-O",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+      "-module-cache-path",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "s3macbrowserdemo",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "s3_mac_browserPackageTests" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "s3_mac_browserPackageTests",
+      "-package-name",
+      "s3macbrowserdemo",
+      "-c",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "11",
+      "-serialize-diagnostics",
+      "-O",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/include/s3-mac-browserPackageTests-Swift.h",
+      "-color-diagnostics",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "s3macbrowserdemo",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "S3MacBrowserDemoApp" : [
+
+    ],
+    "S3MacBrowserDemoAppTests" : [
+      "S3MacBrowserDemoApp"
+    ],
+    "s3_mac_browserPackageTests" : [
+      "S3MacBrowserDemoAppTests",
+      "S3MacBrowserDemoApp"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/LanguageManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Localization/Localization.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/ConnectionProfile.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationJob.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/MigrationSettings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/S3Object.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Models/UploadParameters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/S3MacBrowserDemoApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/AzureBlobBackend.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MetricsRecorder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationCheckpointStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationRunner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/MigrationStreamer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Backend.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Service.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/S3Signer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Services/StorageBackend.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/ConnectionViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/ViewModels/MigrationWizardViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/ConnectionView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationSettingsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/MigrationWizardView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UploadParametersView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/Views/UsageStatsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/DerivedSources/resource_bundle_accessor.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/sources"
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/Sources/S3MacBrowserDemoApp/MetricsTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/DerivedSources/resource_bundle_accessor.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/sources"
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/AzureBlobBackend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionProfile.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/LanguageManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/Localization.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MetricsRecorder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationCheckpointStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationJob.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationRunner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationStreamer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Backend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3MacBrowserDemoApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Object.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Service.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Signer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/StorageBackend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParameters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParametersView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UsageStatsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/resource_bundle_accessor.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browser.product/Objects.LinkFileList"
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/AzureBlobBackend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionProfile.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/ConnectionViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/LanguageManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/Localization.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MetricsRecorder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationCheckpointStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationJob.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationRunner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationSettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationStreamer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/MigrationWizardViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Backend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3MacBrowserDemoApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Object.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Service.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/S3Signer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/StorageBackend.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParameters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UploadParametersView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/UsageStatsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoApp.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/MetricsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/S3MacBrowserDemoAppTests.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/runner.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3-mac-browserPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/sources"
+    },
+    "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
