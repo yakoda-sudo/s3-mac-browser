@@ -1,3 +1,0 @@
-module s3_mac_browserPackageTests {
-    header "/Users/ykou/Documents/s3-mac-browser/S3MacBrowserDemo/.build/arm64-apple-macosx/release/s3_mac_browserPackageTests.build/include/s3-mac-browserPackageTests-Swift.h"
-}
