@@ -26,6 +26,8 @@ API call metrics/Debug options
 - Adding client side request metrics display (72hrs) for the s3 account . Classify by request type .  You can copy the metrics for calculating billing purpose :-)
 - Presigned URL generation, storage account blob sharing
 - Upload via drag & drop ,right click objects to download
+- Create Bucket wizard (S3/S3-compatible) with versioning + object lock options.(right click menu from bucket list level)
+- Create Container wizard (Azure) with public access selection.
 - Delete single or multiple objects/folders (press shift for multi-selection) ,can also restore object remove delete markers
 - Easy and strate-forward UI to configure any object storage types. display history of full debugging API calls
 - Free Cross-Vendors/Protocol Replication Job between AWS S3/ S3-compatible object / Azure Storage Account
